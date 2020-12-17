@@ -4,15 +4,8 @@ kind: Kustomization
 metadata:
   name: cert-manager-crds
   namespace: cert-manager
-spec:
-  interval: 10m0s
-  path: ./releases/download/v1.1.0/cert-manager.crds.yaml
-  prune: true
-  sourceRef:
-    kind: GitRepository
-    name: cert-manager
-    namespace: flux-system
-  validation: client
+resources:
+  - https://github.com/jetstack/cert-manager/releases/download/v1.1.0/cert-manager.crds.yaml
 ---
 apiVersion: source.toolkit.fluxcd.io/v1beta1
 kind: GitRepository
