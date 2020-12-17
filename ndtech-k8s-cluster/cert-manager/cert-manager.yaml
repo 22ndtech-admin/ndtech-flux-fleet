@@ -6,7 +6,7 @@ metadata:
   namespace: cert-manager
 spec:
   interval: 10m0s
-  path: ./releases/download/v0.0.1/cert-manager.crds.yaml
+  path: ./releases/download/v1.1.0/cert-manager.crds.yaml
   prune: true
   sourceRef:
     kind: GitRepository
